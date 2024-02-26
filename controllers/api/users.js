@@ -4,13 +4,18 @@ const User = require('../../models/user');
 
 module.exports = {
   index,
+  bestSeller,
   create,
   login,
+  checkout,
   checkToken
 };
 
 async function index(req, res)  {
-  res.send('Feature Page');
+  res.send('Home Page');
+};
+async function bestSellers(req, res)  {
+  res.send('Best Sellers Page');
 };
 
 async function create(req, res) {
@@ -37,10 +42,16 @@ async function login(req, res) {
   }
 }
 
-function checkToken(req, res) {
-  // Verify middleware is doing its job
-  console.log('req.user', req.user);
-  res.json(req.exp);
+async function checkout(req, res) {
+  if (req.isAuthenticated()) {
+    res.status(200).json({ message: 'Checkout successful'});
+  } else {
+    try {
+      await create(req, res);
+    } catch (err) {
+      res.status(500).json({ message: 'Error'});
+    }
+  }
 }
 
 /*--- Helper Functions --*/

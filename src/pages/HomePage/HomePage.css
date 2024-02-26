@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  background-size: cover;
+}
+
+/* HOME */
+#feature {
+  background-image: url("https://i.imgur.com/4IonQd6.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/*  OUR STORY */
+#our-story {
+  color: white;
+}
+
+/* BEST SELLERS */
+.best-sellers > h2 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; 
+}
+
+
+#best-sellers {
+  background-color: black;
+  color: white;
+}
+
+#bs-bg-image {
+  background-image: url("https://i.imgur.com/LZGREXX.jpeg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% 100%;
+  flex: 1;
+  height: 100%;
+}
+
+#bs-content {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+
+}
+
+#bs-content > span {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* SELFIE */
+#selfie {
+  color: white;
+}
+
+#mission {
+  background-image: url("https://i.imgur.com/mkLuFgG.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+#contact {
+  background-image: url("https://i.imgur.com/YticSFz.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+button {
+  padding: 1em 2em;
+  background-color: white;
+  color: black;
+}

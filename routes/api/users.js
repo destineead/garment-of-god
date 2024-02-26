@@ -5,13 +5,13 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
 // All paths start with '/api/users'
 
-// POST /api/users (create a user - sign up)
-router.post('/', usersCtrl.create);
 // GET /feature
-router.get('/feature', usersCtrl.index);
+router.get('/', usersCtrl.index);
+// GET /best-sellers
+router.get('/best-sellers', usersCtrl.bestSellers);
 // POST /api/users/login
 router.post('/login', usersCtrl.login);
-// GET /api/users/check-token
-router.get('/check-token', ensureLoggedIn, usersCtrl.checkToken);
+// POST /api/users (create a user - sign up)
+router.post('/checkout', ensureLoggedIn, usersCtrl.checkout);
 
 module.exports = router;
