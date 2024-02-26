@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  background-size: cover;
+}
+
+/* Style each section */
+#feature {
+  background-image: url("https://i.imgur.com/4IonQd6.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+#our-story {
+  background-image: url();
+  color: white;
+}
+#best-sellers {
+  background-image: url();
+  color: white;
+}
+#selfie {
+  background-image: url();
+  color: white;
+}
+#mission {
+  background-image: url();
+  color: white;
+}
+#contact {
+  background-image: url();
+  color: white;
+}

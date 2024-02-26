@@ -3,9 +3,14 @@ const bcrypt = require('bcrypt');
 const User = require('../../models/user');
 
 module.exports = {
+  index,
   create,
   login,
   checkToken
+};
+
+async function index(req, res)  {
+  res.send('Feature Page');
 };
 
 async function create(req, res) {

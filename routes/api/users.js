@@ -7,6 +7,8 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
 // POST /api/users (create a user - sign up)
 router.post('/', usersCtrl.create);
+// GET /feature
+router.get('/feature', usersCtrl.index);
 // POST /api/users/login
 router.post('/login', usersCtrl.login);
 // GET /api/users/check-token
