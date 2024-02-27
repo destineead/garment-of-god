@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const productSchema = new mongoose.Schema({
-  productId: {
-    type: String,
-    required: true,
-    unique: true
-  },
+const productSchema = new Schema({
   name: {
     type: String,
     required: true
@@ -19,28 +15,18 @@ const productSchema = new mongoose.Schema({
     required: true
   },
   categoryId: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'Category',
     required: true
   },
-  size: {
-    type: String
-  },
-  images: {
-    type: Array,
-    },
-  color: {
-    type: String,
-    enum: ['Black', 'White', 'Red', 'Navy', 'Tan'],
-  },
-  rating: [
-    {
-      star: Number,
-      postedBy: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
-  },
-],
+  availableSizes: [String],
+  size: String,
+  availableColors: [String],
+  color: String,
+  images: [String]
+}, {
+  timestamps: true
 });
 
-const Product = mongoose.model('Product', productSchema);
 
-module.exports = Product;
+module.exports = mongoose.model('Product', productSchema);

@@ -1,3 +1,10 @@
-.best-sellers-page > h1 {
-  margin-top: 100px;
+.space-top {
+  padding: 500px;
+}
+
+.best-sellers-page {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
 }
