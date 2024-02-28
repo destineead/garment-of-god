@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('./category');
 const productSchema = require('./productSchema');
+require('./category');
 
 module.exports = mongoose.model('Product', productSchema);
