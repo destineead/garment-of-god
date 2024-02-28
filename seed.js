@@ -6,7 +6,6 @@ const categories = await Category.create([
 {name: 'Best Sellers'},
 {name: 'Hoodies'},
 {name: 'Sweatshirt'},
-{name: "Custom Order's"},
 ]);
 
 await Product.deleteMany({});
@@ -15,29 +14,29 @@ const product = await Product.create([
   name: 'Rooted In Christ', 
   sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
   size: '',
-  colorsAvailable: '', 
+  colorsAvailable: ['Forest Green', 'Grey'], 
   color: '',
-  images: [],
+  images: ['https://i.imgur.com/qeD3wwf.jpeg', 'https://i.imgur.com/4i2R2nY.jpeg'],
   description: 'Stand tall, Rooted in Christ',
-  categoryId: categories[1], 
+  categoryId: categories[0], 
   price: 59.99
 },{
   name: 'All Things', 
   sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
   size: '',
-  colorsAvailable: '', 
+  colorsAvailable: ['Grey'], 
   color: '',
-  images: [], 
-  description: '', 
+  images: ['https://i.imgur.com/wmNB8ha.jpg', 'https://i.imgur.com/CrGM0EK.jpg'], 
+  description: 'Not by power, not by might but by the strength of the holy', 
   categoryId: categories[2], 
   price: 39.99
 },{
   name: 'Healed & Forgiven', 
   sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
   size: '',
-  colorsAvailable: '', 
+  colorsAvailable: ['Tan', 'Black'], 
   color: '',
-  images: [], 
+  images: ['https://i.imgur.com/yjAz8gn.jpeg', 'https://i.imgur.com/iAUr7pF.jpeg'], 
   description: 'Embrace redemption: Healed, Forgiven and Free', 
   categoryId: categories[1], 
   price: 59.99 
@@ -45,29 +44,19 @@ const product = await Product.create([
   name: 'Matthew 7:7', 
   sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
   size: '',
-  colorsAvailable: '', 
+  colorsAvailable: ['Gold', 'Blue', 'White', 'Black'], 
   color: '',
-  images: [], 
+  images: ['https://i.imgur.com/IscMNwU.jpeg', 'https://i.imgur.com/8mVBxXv.jpeg', 'https://i.imgur.com/IscMNwU.jpeg'], 
   description: 'Keep on asking, and you will receive what you ask for. Keep on seeking, and you will find. Keep on knocking, and the door will be opened to you.', 
-  categoryId: categories[1], 
-  price: 59.99
-},{
-  name: 'Agape', 
-  sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
-  size: '',
-  colorsAvailable: '', 
-  color: '',
-  images: [], 
-  description: 'Agape love: representing selfless, unconditional compassion and grace towards others.', 
   categoryId: categories[1], 
   price: 59.99
 },{
   name: 'But First, Pray', 
   sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
   size: '',
-  colorsAvailable: '', 
+  colorsAvailable: ['White', 'Red'], 
   color: '',
-  images: [], 
+  images: ['https://i.imgur.com/9kA0jsB.jpeg', 'https://i.imgur.com/A3ezdAl.jpeg'], 
   description: 'Before any & everything!', 
   categoryId: categories[0],
   price: 59.99
@@ -75,33 +64,23 @@ const product = await Product.create([
   name: 'Jesus Crest', 
   sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
   size: '',
-  colorsAvailable: '', 
+  colorsAvailable: ['Red', 'Navy'], 
   color: '',
-  images: [], 
+  images: ['https://i.imgur.com/4OLEkWX.jpeg', 'https://i.imgur.com/6MC81zJ.jpeg'], 
   description: 'A powerful reminder of His sacrificial love.', 
   categoryId: categories[0],
   price: 59.99
 },{
-  name: 'Come Too Far', 
-  sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
-  size: '',
-  colorsAvailable: '', 
-  color: '',
-  images: [], 
-  description: "God didn't bring you this far to leave you - Phillippians 1:6", 
-  categoryId: categories[2], 
-  price: 39.99
-},{
   name: 'Job 8:7', 
   sizesAvailable: ['S', 'M', 'L', 'XL', '2XL'], 
   size: '',
-  colorsAvailable: '', 
+  colorsAvailable: ['Cardinal Red'], 
   color: '',
-  images: [], 
+  images: ['https://i.imgur.com/lPCqQLV.jpeg', 'https://i.imgur.com/7d6ItVj.jpeg'], 
   description: '', 
   categoryId: categories[2], 
   price: 39.99
-}
+},
 ]);
 
 console.log(items)
