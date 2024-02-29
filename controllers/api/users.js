@@ -3,19 +3,9 @@ const bcrypt = require('bcrypt');
 const User = require('../../models/user');
 
 module.exports = {
-  index,
-  bestSellers,
   create,
   login,
   checkout,
-  checkToken
-};
-
-async function index(req, res)  {
-  res.send('Home Page');
-};
-async function bestSellers(req, res)  {
-  res.send('Best Sellers Page');
 };
 
 async function create(req, res) {

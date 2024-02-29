@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import './Nav.css';
 
+import logo from '../../Assets/logo.png'
+import cart from '../../Assets/cart-icon.svg'
+import userIcon from '../../Assets/user-icon.svg'
+
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
     userService.logOut();
@@ -9,12 +13,24 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav className="navbar">
-      <p><Link to="/">HOME</Link></p>
-      <p><Link to="/best-sellers">SHOP</Link></p>
-      <p><Link to="/profile">PROFILE</Link></p>
-      <p><Link to="/cart">CART</Link></p>
-     <Link to="" onClick={handleLogOut}>Log Out</Link>
-    </nav>
+    <div className="navbar">
+      <div className="nav-logo">
+        <img src={logo} alt="" />
+      </div>
+      <ul className='nav-menu'>
+        <li><Link to="/">HOME </Link></li>
+        <li><Link to="/shop">SHOP</Link></li>
+        <img src={userIcon} alt="" />
+      </ul>
+      <div className="login-cart">
+        {user ? (
+          <button><Link to="" onClick={handleLogOut}>Log Out</Link></button>
+          ):(
+          <button><Link to="/login">Log In</Link></button>
+        )}
+        <img src={cart} alt="" />
+        <div className="nav-cart-count">0</div>
+      </div>
+    </div>
   );
-}
+} 

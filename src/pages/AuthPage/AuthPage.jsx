@@ -6,13 +6,14 @@ export default function AuthPage({ setUser }) {
   const [showSignUp, setShowSignUp] = useState(false);
   return (
     <main>
-      <h1>AuthPage</h1>
-      <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up'}</button>
       { showSignUp ?
           <SignUpForm setUser={setUser} />
           :
-          <LoginForm setUser={setUser} />
-      }
+          <LoginForm className="form" setUser={setUser} />
+        }
+        <h2 className='flex-ctr-ctr'>OR
+        <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Sign Up!'}</button>
+        </h2>
     </main>
   );
 }
