@@ -7,7 +7,7 @@ export default function HomePage() {
         <div>
             <section>
                 <section id="feature" className="section">
-                <button><Link to="/best-sellers">SHOP NOW</Link></button>
+                <button><Link to="/shop">SHOP NOW</Link></button>
                 </section>
                 <section id="our-story" className="section">
                     <h2>OUR STORY</h2>
@@ -17,14 +17,17 @@ export default function HomePage() {
                     <div id='bs-bg-image'/>
                     <p id='bs-content'><span>SHOP BEST SELLERS</span><br/>
                         Discover your next must-have.<br/><br/>
-                            <button><Link to="/best-sellers">SHOP NOW</Link></button>
+                            <button><Link to="/shop">SHOP NOW</Link></button>
                     </p>
                 </section>
                 <section id="selfie" className="section">
                     <h2>HOW OTHERS STYLE IT</h2>
                 </section>
                 <section id="mission" className="section">
-                    <h2>Why people love to shop Garment of God</h2>
+                    <div className="mission-content">
+                        <h2>Why people love to shop Garment of God</h2>
+                    </div>
+                    <div id='mission-bg-image'/>
                 </section>
                 <section id="contact" className="section">
                     <h2>Contact Us</h2>

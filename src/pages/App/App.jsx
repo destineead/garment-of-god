@@ -14,26 +14,21 @@ export default function App() {
 
   return (
     <main className="App">
+      <NavBar user={user} />
       { user ? (
-          <>
-            <NavBar />
-            <Routes>
-              {/* Route components in here */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/shop" element={<ShopPage />} />
-              <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/cart" element={<CartPage />} />
-            </Routes>
-          </>
+        <Routes>
+          {/* Route components in here */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
       ):(
-          <>
-            <NavBar user={user} />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/shop" element={<ShopPage />} />
-              <Route path="/login" element={<AuthPage setUser={setUser} />} />
-            </Routes>
-          </>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/login" element={<AuthPage setUser={setUser} />} />
+        </Routes>
       )}
     </main>
   );
