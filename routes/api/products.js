@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const productsCtrl = require('../../controllers/api/products');
 
+// ALL PATHS start with /api/products
+
 // GET /api/products
-router.get('/shop', productsCtrl.index);
-// GET /api/products/:id
-router.get('/:id', productsCtrl.show);
+router.get('/', productsCtrl.index);
 
 module.exports = router;

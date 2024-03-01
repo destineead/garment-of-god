@@ -23,7 +23,7 @@ require('./config/database');
       color: '',
       images: ['https://i.imgur.com/qeD3wwf.jpeg', 'https://i.imgur.com/4i2R2nY.jpeg'],
       description: 'Stand tall, Rooted in Christ',
-      categoryId: categories[0], 
+      category: categories[0], 
       price: 59.99
     },{
       name: 'All Things', 
@@ -33,7 +33,7 @@ require('./config/database');
       color: '',
       images: ['https://i.imgur.com/wmNB8ha.jpg', 'https://i.imgur.com/CrGM0EK.jpg'], 
       description: 'Not by power, not by might but by the strength of the holy', 
-      categoryId: categories[2], 
+      category: categories[2], 
       price: 39.99
     },{
       name: 'Healed & Forgiven', 
@@ -43,7 +43,7 @@ require('./config/database');
       color: '',
       images: ['https://i.imgur.com/yjAz8gn.jpeg', 'https://i.imgur.com/iAUr7pF.jpeg'], 
       description: 'Embrace redemption: Healed, Forgiven and Free', 
-      categoryId: categories[1], 
+      category: categories[1], 
       price: 59.99 
     },{
       name: 'Matthew 7:7', 
@@ -53,7 +53,7 @@ require('./config/database');
       color: '',
       images: ['https://i.imgur.com/IscMNwU.jpeg', 'https://i.imgur.com/8mVBxXv.jpeg', 'https://i.imgur.com/IscMNwU.jpeg'], 
       description: 'Keep on asking, and you will receive what you ask for. Keep on seeking, and you will find. Keep on knocking, and the door will be opened to you.', 
-      categoryId: categories[1], 
+      category: categories[1], 
       price: 59.99
     },{
       name: 'But First, Pray', 
@@ -63,7 +63,7 @@ require('./config/database');
       color: '',
       images: ['https://i.imgur.com/9kA0jsB.jpeg', 'https://i.imgur.com/A3ezdAl.jpeg'], 
       description: 'Before any & everything!', 
-      categoryId: categories[0],
+      category: categories[0],
       price: 59.99
     },{
       name: 'Jesus Crest', 
@@ -73,7 +73,7 @@ require('./config/database');
       color: '',
       images: ['https://i.imgur.com/4OLEkWX.jpeg', 'https://i.imgur.com/6MC81zJ.jpeg'], 
       description: 'A powerful reminder of His sacrificial love.', 
-      categoryId: categories[0],
+      category: categories[0],
       price: 59.99
     },{
       name: 'Job 8:7', 
@@ -83,7 +83,7 @@ require('./config/database');
       color: '',
       images: ['https://i.imgur.com/lPCqQLV.jpeg', 'https://i.imgur.com/7d6ItVj.jpeg'], 
       description: 'Job 8:7', 
-      categoryId: categories[2], 
+      category: categories[2], 
       price: 39.99
     },
   ]);

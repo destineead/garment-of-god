@@ -14,14 +14,14 @@ const productSchema = new Schema({
     type: Number,
     required: true
   },
-  categoryId: {
+  category: {
     type: Schema.Types.ObjectId,
     ref: 'Category',
     required: true
   },
-  availableSizes: [String],
+  sizesAvailable: [String],
   size: String,
-  availableColors: [String],
+  colorsAvailable: [String],
   color: String,
   images: [String]
 }, {

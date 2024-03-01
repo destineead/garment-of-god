@@ -1,21 +1,11 @@
-import { useState, useEffect } from 'react';
-import * as productsAPI from '../../utilities/products-api';
+import { Link } from 'react-router-dom';
 
-export default function ShopPage() {
-  const [menuItems, setMenuItems] = useState([])
+export default function ShopPage({products}) {
 
-  useEffect(function() {
-    async function getProducts() {
-      const products = await productsAPI.getAll();
-      setMenuItems(products);
-    }
-    getProducts();
-  },[]);
-
-  
   return (
     <div>
       <h2>Shop</h2>
+      
     </div>
   );
 };
