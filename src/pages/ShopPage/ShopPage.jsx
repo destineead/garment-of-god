@@ -1,13 +1,12 @@
-import ProductList from '../../components/ProductList/ProductList'
+import ProductList from '../../components/ProductList/ProductList';
+import './ShopPage.css'
 
-export default function ShopPage({ products, categories}) {
+export default function ShopPage({ products }) {
 
   return (
-    <div>
-      <h2>Shop</h2>
-        <div className='product-list'>
-          <ProductList products={products}/>
-        </div>
+    <div className='shop-page'>
+      <header className='header'>SHOP</header>
+          <ProductList products={products} />
     </div>
   )
 }

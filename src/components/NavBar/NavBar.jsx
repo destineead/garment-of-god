@@ -4,7 +4,6 @@ import './Nav.css';
 
 import logo from '../../Assets/logo.png'
 import cart from '../../Assets/cart-icon.svg'
-import userIcon from '../../Assets/user-icon.svg'
 
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
@@ -20,7 +19,6 @@ export default function NavBar({ user, setUser }) {
       <ul className='nav-menu'>
         <li><Link to="/">HOME </Link></li>
         <li><Link to="/shop">SHOP</Link></li>
-        <img src={userIcon} alt="" />
       </ul>
       <div className="login-cart">
         {user ? (
@@ -28,7 +26,7 @@ export default function NavBar({ user, setUser }) {
           ):(
           <button><Link to="/login">Log In</Link></button>
         )}
-        <img src={cart} alt="" />
+        <Link to='/cart'><img src={cart} alt="" id='cart-img' /></Link>
         <div className="nav-cart-count">0</div>
       </div>
     </div>

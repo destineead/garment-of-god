@@ -41,7 +41,7 @@ font-style: normal;
   gap: 40px;
 }
 
-.login-cart > img {
+#cart-img {
   width: 25px;
 }
 

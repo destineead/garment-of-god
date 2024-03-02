@@ -1,9 +1,12 @@
 .product-list-item {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  width: 280px;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
 }
-.product-list-item > img {
-  width: 30px;
+
+.product-list-item img {
+  max-width: 250px;
   height: auto;
 }

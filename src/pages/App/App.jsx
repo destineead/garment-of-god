@@ -7,7 +7,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../../pages/HomePage/HomePage';
 import ShopPage from '../../pages/ShopPage/ShopPage';
-import ProfilePage from '../ProfilePage/ProfilePage';
+import ProductDetailPage from '../../pages/ProductDetailPage/ProductDetailPage';
 import CartPage from '../CartPage/CartPage';
 
 export default function App() {
@@ -30,13 +30,14 @@ export default function App() {
           {/* Route components in here */}
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage products={products} />} />
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/products/:productId" element={<ProductDetailPage products={products} />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       ):(
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/shop" element={<ShopPage products={products} />} />
+          <Route path="/products/:productId" element={<ProductDetailPage products={products} />} />
           <Route path="/login" element={<AuthPage setUser={setUser} />} />
         </Routes>
       )}

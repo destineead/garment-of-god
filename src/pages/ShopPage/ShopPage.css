@@ -1,10 +1,14 @@
-.space-top {
-  padding: 500px;
+.shop-page {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
 }
 
-.best-sellers-page {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
+.header {
   font-style: italic;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.product-list {
+  padding-top: 150px;
 }

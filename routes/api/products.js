@@ -7,4 +7,6 @@ const productsCtrl = require('../../controllers/api/products');
 // GET /api/products
 router.get('/', productsCtrl.index);
 
+router.get('/:id', productsCtrl.show)
+
 module.exports = router;

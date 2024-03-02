@@ -2,6 +2,8 @@ const Product = require('../../models/product');
 
 module.exports = {
   index,
+  show
+
 };
 
 async function index(req, res) {
@@ -9,4 +11,9 @@ async function index(req, res) {
   products.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
   console.log(products)
   res.json(products);
+}
+
+async function show(req, res) {
+  const product = await Product.findById(req.params.id);
+  res.json(product)
 }
