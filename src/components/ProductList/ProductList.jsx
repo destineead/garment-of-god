@@ -7,7 +7,7 @@ export default function ProductList({ products }) {
   return (
     <div className='product-container'>
       {products.map((p) => (
-        <Link to={`/products/${p._id}`}>
+        <Link to={`/products/${p._id}`} key={p._id}>
           <ProductListItem key={p._id} product={p}/>
         </Link>
       ))}

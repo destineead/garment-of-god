@@ -1,12 +1,9 @@
 import './ProductListItem.css';
 
-export default function ProductListItem({ product, onProductClick }) {
-  function handleClick() {
-    onProductClick(product)
-  };
+export default function ProductListItem({ product }) {
 
   return (
-    <div className="product-list-item" onClick={handleClick}>
+    <div className="product-list-item">
       <img src={product.images[0]} alt="" id="product-list-item-img"/>
       <div className="product-list-content">
         <p>{product.name}</p>

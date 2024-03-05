@@ -3,7 +3,6 @@ const Product = require('../../models/product');
 module.exports = {
   index,
   show
-
 };
 
 async function index(req, res) {
