@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import * as productsAPI from '../../utilities/products-api';
 import * as ordersAPI from '../../utilities/orders-api';
@@ -22,31 +22,38 @@ export default function App() {
       setProducts(allProducts);
     }
     getProducts();
-
+  }, []);
+  
+  useEffect(function () {
     async function getCart() {
       const cart = await ordersAPI.getCart();
       setCart(cart);
     }
-    getCart();
-  },[]);
+    if (user) {
+      getCart();
+    } else {
+      setCart(null);
+    }
+  }, [user]);
 
   return (
     <main className="App">
-      <NavBar user={user} />
+      <NavBar user={user} order={cart} setUser={setUser} />
       { user ? (
         <Routes>
           {/* Route components in here */}
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage products={products} />} />
-          <Route path="/products/:productId" element={<ProductDetailPage products={products} />} />
-          <Route path="/cart" element={<CartPage cart={cart} />} />
+          <Route path="/shop" element={<ShopPage products={products} user={user} />} />
+          <Route path="/products/:productId" element={<ProductDetailPage products={products} setCart={setCart} />} />
+          <Route path="/cart" element={<CartPage order={cart} />} />
+          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       ):(
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage products={products} user={user}/>} />
+          <Route path="/shop" element={<ShopPage products={products} user={user} />} />
           <Route path="/login" element={<AuthPage setUser={setUser} />} />
-          <Route path="/cart" element={<CartPage products={products} cart={cart} />} />
+          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       )}
     </main>

@@ -3,9 +3,9 @@ import * as userService from '../../utilities/users-service';
 import './Nav.css';
 
 import logo from '../../Assets/logo.png'
-import cart from '../../Assets/cart-icon.svg'
+import cartImg from '../../Assets/cart-icon.svg'
 
-export default function NavBar({ user, setUser }) {
+export default function NavBar({ user, setUser, order }) {
   function handleLogOut() {
     userService.logOut();
     setUser(null);
@@ -26,10 +26,10 @@ export default function NavBar({ user, setUser }) {
           ):(
           <button><Link to="/login">Log In</Link></button>
         )}
-        {user && 
+        {(user && order) && 
           <>
-            <Link to='/cart'><img src={cart} alt="" id='cart-img' /></Link>
-            <div className="nav-cart-count">0</div>
+            <Link to='/cart'><img src={cartImg} alt="" id='cart-img' /></Link>
+            <div className="nav-cart-count">{order.orderQty}</div>
           </>
         }
       </div>
