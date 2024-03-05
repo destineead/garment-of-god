@@ -9,13 +9,11 @@ export function getCart() {
 
 // Add an product to the cart
 export function addToCart(productId) {
-  // Just send productId for best security (no pricing)
-  console.log(productId)
   return sendRequest(`${BASE_URL}/cart/${productId}`, 'POST');
 }
 
-export function setItemQtyInCart(itemId, newQty) {
-  return sendRequest(`${BASE_URL}/cart/qty`, 'PUT', { itemId, newQty });
+export function setProductQuantityInCart(productId, newQty) {
+  return sendRequest(`${BASE_URL}/cart/qty`, 'PUT', { productId, newQty })
 }
 
 export function checkout() {

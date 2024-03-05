@@ -60,11 +60,11 @@ orderSchema.methods.addItemToCart = async function (productId) {
   return cart.save();
 };
 
-orderSchema.methods.setItemQty = function(itemId, newQty) {
+orderSchema.methods.setItemQty = function(productId, newQty) {
   const cart = this;
-  const lineItem = cart.lineItems.find(lineItem => lineItem.product._id.equals(itemId));
+  const lineItem = cart.lineItems.find(lineItem => lineItem.product._id.equals(productId));
   if (lineItem && newQty <= 0) {
-    lineItem.deleteOne();
+    lineItem.remove(lineItem.product);
   } else if (lineItem) {
     lineItem.qty = newQty;
   }

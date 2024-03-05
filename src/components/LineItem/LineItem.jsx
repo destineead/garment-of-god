@@ -1,4 +1,5 @@
-export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
+export default function LineItem({lineItem, handleChangeQty}) {
+
   return (
     <div className="LineItem">
       <div>{lineItem.product.name}</div>
@@ -7,17 +8,13 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
         <span>{lineItem.product.price.toFixed(2)}</span>
       </div>
       <div>
-        {!isPaid &&
           <button onClick={() => handleChangeQty(lineItem.product._id, lineItem.qty - 1)}>
             −
           </button>
-        }
         <span>{lineItem.qty}</span>
-        {!isPaid &&
           <button onClick={() => handleChangeQty(lineItem.product._id, lineItem.qty + 1)}>
             +
           </button>
-        }
       </div>
       <div>${lineItem.extPrice.toFixed(2)}</div>
     </div>

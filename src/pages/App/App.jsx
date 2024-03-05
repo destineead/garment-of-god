@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import * as productsAPI from '../../utilities/products-api';
 import * as ordersAPI from '../../utilities/orders-api';
@@ -10,11 +10,13 @@ import HomePage from '../../pages/HomePage/HomePage';
 import ShopPage from '../../pages/ShopPage/ShopPage';
 import ProductDetailPage from '../../pages/ProductDetailPage/ProductDetailPage';
 import CartPage from '../../pages/CartPage/CartPage';
+import ConfirmationPage from '../../pages/ConfirmationPage/ConfirmationPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(function() {
     async function getProducts() {
@@ -36,6 +38,17 @@ export default function App() {
     }
   }, [user]);
 
+  async function handleChangeQty(productId, newQty) {
+    const updatedCart = await ordersAPI.setProductQuantityInCart(productId, newQty);
+    setCart(updatedCart);
+  }
+
+  async function handleCheckout() {
+    await ordersAPI.checkout();
+    navigate('/confirmation');
+  }
+  
+
   return (
     <main className="App">
       <NavBar user={user} order={cart} setUser={setUser} />
@@ -45,15 +58,16 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage products={products} user={user} />} />
           <Route path="/products/:productId" element={<ProductDetailPage products={products} setCart={setCart} />} />
-          <Route path="/cart" element={<CartPage order={cart} />} />
-          <Route path="/*" element={<Navigate to="/" />} />
+          <Route path="/cart" element={<CartPage order={cart} handleChangeQty={handleChangeQty} handleCheckout={handleCheckout}/>} />
+          <Route path="/confirmation" element={<ConfirmationPage />} />
+          <Route path="/*" element={<navigate to="/" />} />
         </Routes>
       ):(
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage products={products} user={user} />} />
           <Route path="/login" element={<AuthPage setUser={setUser} />} />
-          <Route path="/*" element={<Navigate to="/" />} />
+          <Route path="/*" element={<navigate to="/" />} />
         </Routes>
       )}
     </main>
