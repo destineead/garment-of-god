@@ -9,7 +9,7 @@ export function getCart() {
 
 // Add an product to the cart
 export function addToCart(productId) {
-  return sendRequest(`${BASE_URL}/cart/${productId}`, 'POST');
+  return sendRequest(`${BASE_URL}/cart/products/${productId}`, 'POST');
 }
 
 export function setProductQuantityInCart(productId, newQty) {
