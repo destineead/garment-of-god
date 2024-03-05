@@ -1,13 +1,18 @@
-import LineItem from '../../components/LineItem/LineItem'
+import LineItem from '../../components/LineItem/LineItem';
 
-export default function CartPage() {
+export default function CartPage({ order }) {
+  if (!order) return null;
 
+  const lineItems = order.lineItems.map(lineItem =>
+    <LineItem
+      lineItem={lineItem}
+      key={lineItem._id}
+    />
+  );
   return (
     <div className="cart-page">
-      <div className="cartpage-header">
-        <h1>Cart Page</h1>
-        <LineItem />
-    </div>
+      <h1>Cart Page</h1>
+     {lineItems}
     </div>
   );
 } 

@@ -39,13 +39,12 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage products={products} />} />
           <Route path="/products/:productId" element={<ProductDetailPage products={products} />} />
-          <Route path="/cart" element={<CartPage products={products} cart={cart} />} />
+          <Route path="/cart" element={<CartPage cart={cart} />} />
         </Routes>
       ):(
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage products={products} />} />
-          <Route path="/products/:productId" element={<ProductDetailPage products={products} />} />
+          <Route path="/shop" element={<ShopPage products={products} user={user}/>} />
           <Route path="/login" element={<AuthPage setUser={setUser} />} />
           <Route path="/cart" element={<CartPage products={products} cart={cart} />} />
         </Routes>

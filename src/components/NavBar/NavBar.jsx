@@ -26,8 +26,12 @@ export default function NavBar({ user, setUser }) {
           ):(
           <button><Link to="/login">Log In</Link></button>
         )}
-        <Link to='/cart'><img src={cart} alt="" id='cart-img' /></Link>
-        <div className="nav-cart-count">0</div>
+        {user && 
+          <>
+            <Link to='/cart'><img src={cart} alt="" id='cart-img' /></Link>
+            <div className="nav-cart-count">0</div>
+          </>
+        }
       </div>
     </div>
   );
