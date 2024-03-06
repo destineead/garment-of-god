@@ -30,9 +30,12 @@ export default function HomePage() {
                         <img id="owners" src={owners} alt="" />
                         <div id='our-story-content'>
                             <h2 id="our-story-title">OUR STORY</h2>
-                            <p>Hi, we are the Adomako's! We're so grateful that you're here. As partners in life and business, we embarked on this remarkable journey of weaving threads of faith into fabric in 2020. 
-                                Our story began with a simple yet profound idea: to create a brand that is not only aesthetically pleasing but also showcases God and faith. This seed of inspiration took root in our hearts, and soon “Garment of God” was born. 
-                                With a shared passion for spreading positivity and faith, it has led us to creating garments adorned with uplifting messages and symbols. 
+                            <p>Hi, we are the Adomako's! We're so grateful that you're here. 
+                                As partners in life and business, we embarked on this remarkable journey of creating faith-based apparel 2020. 
+                                Our story began with a simple yet profound idea: to create a brand that is not only aesthetically pleasing but also showcases God and faith. 
+                                This seed of inspiration took root in our hearts, when studying Mark 15:21 together. The scripture tells the story of a woman who had an abundance of faith. 
+                                So much faith she believed that with a simple touch a Jesus' garment, she could be healed. Soon after, “Garment of God” was born with the idea that a simple garment could bring healing to others. 
+                                <br />
                                 <br />
                                 Garment of God has been a blessing to us, our customers and now you! Thank you for joining our journey !😃</p>
                         </div>
@@ -72,9 +75,9 @@ export default function HomePage() {
                         <div class="footer-social">
                             <h3>Follow Us</h3>
                             <ul>
-                                <li><a href="https://www.facebook.com/garmentofgod?mibextid=hu50Ix"><img src={facebook} alt="Facebook" /></a></li>
-                                <li><a href="https://www.tiktok.com/@garmentofgod?_t=8kRjeDdgfp8&_r=1"><img src={tiktok} alt="TikTok" /></a></li>
-                                <li><a href="https://www.instagram.com/garmentofgod/?igsh=MXBja3Y3MDliZ295eQ%3D%3D&utm_source=qr"><img src={instagram} alt="Instagram" /></a></li>
+                                <li><a href="https://www.facebook.com/garmentofgod?mibextid=hu50Ix" target="_blank"><img src={facebook} alt="Facebook" /></a></li>
+                                <li><a href="https://www.tiktok.com/@garmentofgod?_t=8kRjeDdgfp8&_r=1" target="_blank"><img src={tiktok} alt="TikTok" /></a></li>
+                                <li><a href="https://www.instagram.com/garmentofgod/?igsh=MXBja3Y3MDliZ295eQ%3D%3D&utm_source=qr" target="_blank"><img src={instagram} alt="Instagram" /></a></li>
                             </ul>
                         </div>
                     </div>
