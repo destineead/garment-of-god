@@ -37,7 +37,7 @@ export default function SignUpForm({setUser}) {
 
   const disable = userData.password !== userData.confirm;
   return (
-    <div>
+    <div className="flex-ctr-ctr">
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Name</label>

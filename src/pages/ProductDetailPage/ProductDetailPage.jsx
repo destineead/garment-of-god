@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
 import './ProductDetailPage.css';
 
@@ -16,10 +16,12 @@ export default function ProductDetailPage({ products, setCart }) {
 
   return (
     <div className="product-detail-container">
-      <div className="product-images">
+      <div className="product-images-container">
+        <div className="product-images">
           {selectedProduct.images.map((image, index) => (
             <img key={index} src={image} alt={`Product ${index + 1}`} />
           ))}
+        </div>
       </div>
       <div className="product-content">
         <h1 className="product-name">{selectedProduct.name}</h1>
@@ -27,10 +29,10 @@ export default function ProductDetailPage({ products, setCart }) {
         <p>{selectedProduct.size}</p>
         <p>{selectedProduct.colorsAvailable.join(' , ')}</p>
         <p>{selectedProduct.color}</p>
-        <p className="product-description">{selectedProduct.description}</p>
+        <p className="product-description">Description: {selectedProduct.description}</p>
         <p className="product-price">{selectedProduct.price}</p>
+        <p></p>
         <button className="add-to-cart-btn" onClick={() => handleAddToCart(selectedProduct._id)}>Add To Cart</button>
-        <Link to="/cart" className="view-cart-btn">View Cart</Link>
       </div>
     </div>
   );

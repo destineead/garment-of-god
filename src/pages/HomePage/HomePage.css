@@ -22,8 +22,15 @@ body {
 }
 
 /*  OUR STORY */
-#our-story {
-  color: white;
+#our-story-title {
+color: white;
+width: 45%;
+margin: 0;
+}
+
+#our-story-content {
+ color: white;
+ width: 50%;
 }
 
 /* BEST SELLERS */
@@ -68,6 +75,7 @@ body {
   color: white;
 }
 
+/* MISSION */
 #mission {
   background-color: black;
   color: white;
@@ -82,10 +90,9 @@ body {
   height: 100%;
 }
 
-#mission-content {
-  flex: 1;
-  height: 100%;
-  overflow: auto;
+.mission-content {
+width: 40%;
+margin: 0;
 }
 
 #contact {

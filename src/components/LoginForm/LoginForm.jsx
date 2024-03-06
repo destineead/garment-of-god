@@ -31,7 +31,7 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
-    <div>
+    <div className="flex-ctr-ctr">
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>

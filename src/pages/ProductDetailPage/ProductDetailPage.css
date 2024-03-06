@@ -1,20 +1,28 @@
 .product-detail-container {
-  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
+  max-height: 90vh;
+}
+
+.product-images-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .product-images {
-display: flex;
-flex-direction: column;
-overflow-y: auto;
-margin-right: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-images img {
   max-width: 100%;
   margin-bottom: 10px;
+}
+
+.product-content {
+  flex: 1;
 }
 
 .product-name {
