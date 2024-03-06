@@ -30,7 +30,11 @@ export default function HomePage() {
                         <img id="owners" src={owners} alt="" />
                         <div id='our-story-content'>
                             <h2 id="our-story-title">OUR STORY</h2>
-                            <p>Hi, Welcome to Garment of God! We are the Adomako's and we're so grateful that you're here. In 2020, we stared this small business with purpose to spead the gospel through fashion. As beleivers, we want to not only spead the gospel through what we say, but rather how we show up in the world also.</p>
+                            <p>Hi, we are the Adomako's! We're so grateful that you're here. As partners in life and business, we embarked on this remarkable journey of weaving threads of faith into fabric in 2020. 
+                                Our story began with a simple yet profound idea: to create a brand that is not only aesthetically pleasing but also showcases God and faith. This seed of inspiration took root in our hearts, and soon “Garment of God” was born. 
+                                With a shared passion for spreading positivity and faith, it has led us to creating garments adorned with uplifting messages and symbols. 
+                                <br />
+                                Garment of God has been a blessing to us, our customers and now you! Thank you for joining our journey !😃</p>
                         </div>
                     </div>
                 </section>

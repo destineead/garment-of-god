@@ -46,7 +46,7 @@ Welcome to Garment of God! A faith-based appareal brand founded by husband and w
 
 <details open>
   <summary> Home Page </summary>
-   When navigating to Garment of God you will see our Home page. Scrol down to see the owners, their story, as well as customer selfies!
+   When navigating to Garment of God you will see our Home page. Scroll down to see the owners, their story, as well as customer selfies!
 </details>
 
 <details>
