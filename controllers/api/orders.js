@@ -16,7 +16,7 @@ async function cart(req, res) {
 // add item to cart
 async function addToCart(req, res) {
   const cart = await Order.getCart(req.user._id);
-  await cart.addItemToCart(req.params.id);
+  await cart.addItemToCart(req.params.id, req.body);
   res.json(cart);
 }
 
@@ -29,10 +29,9 @@ async function setProductQtyInCart(req, res) {
 
 // updates isPaid
 async function checkout(req, res) {
-  const cart = await Order.getCart(req.user._id);
-  console.log(cart)
+  let cart = await Order.getCart(req.user._id);
   cart.isPaid = true;
-  console.log(cart.isPaid)
   await cart.save();
+  cart = await Order.getCart(req.user._id);
   res.json(cart);
 }

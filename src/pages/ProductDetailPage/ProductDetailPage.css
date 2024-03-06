@@ -22,6 +22,7 @@
 }
 
 .product-content {
+  padding-top: 8em;
   flex: 1;
 }
 
@@ -54,3 +55,18 @@
 .add-to-cart-btn:hover {
   background-color: #0056b3; 
 }
+
+.size-options button, .color-options button {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.size-options button.selected, .color-options button.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+

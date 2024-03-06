@@ -1,4 +1,5 @@
 import LineItem from '../../components/LineItem/LineItem';
+import './CartPage.css'
 
 export default function CartPage({ order, handleChangeQty, handleCheckout }) {
   if (!order) return null;
@@ -13,8 +14,10 @@ export default function CartPage({ order, handleChangeQty, handleCheckout }) {
   return (
     <div className="cart-page">
       <h1>Cart Page</h1>
+      <div className="line-item-container">
      {lineItems}
      <button onClick={handleCheckout} disabled={!lineItems.length}>Checkout</button>
+     </div>
     </div>
   );
 } 

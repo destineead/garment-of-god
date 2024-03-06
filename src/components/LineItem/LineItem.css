@@ -1,0 +1,45 @@
+.lineItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.lineItem > div {
+  flex: 1;
+}
+
+.lineItem > div:first-child {
+  margin-right: 10px;
+}
+
+.lineItem > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.lineItem span {
+  margin-right: 10px;
+}
+
+.lineItem button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+}
+
+.lineItem button:hover {
+  color: #007bff;
+}
+
+.lineItem .qty {
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.lineItem .extPrice {
+  font-weight: bold;
+}

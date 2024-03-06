@@ -44,7 +44,8 @@ export default function App() {
   }
 
   async function handleCheckout() {
-    await ordersAPI.checkout();
+    const newCart = await ordersAPI.checkout();
+    setCart(newCart);
     navigate('/confirmation');
   }
   

@@ -8,8 +8,8 @@ export function getCart() {
 }
 
 // Add an product to the cart
-export function addToCart(productId) {
-  return sendRequest(`${BASE_URL}/cart/products/${productId}`, 'POST');
+export function addToCart(productId, selectedSize, selectedColor) {
+  return sendRequest(`${BASE_URL}/cart/products/${productId}`, 'POST', {selectedSize, selectedColor});
 }
 
 export function setProductQuantityInCart(productId, newQty) {

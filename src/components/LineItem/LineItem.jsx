@@ -1,16 +1,19 @@
+import './LineItem.css'
 export default function LineItem({lineItem, handleChangeQty}) {
-
+console.log(lineItem.product.color)
+console.log(lineItem.product.size)
   return (
-    <div className="LineItem">
+    <div className="lineItem">
       <div>{lineItem.product.name}</div>
       <div>
-        <span>{lineItem.product.description}</span>
+        <span>Color: {lineItem.product.color}</span>
+        <span>Size: {lineItem.product.size}</span>
         <span>{lineItem.product.price.toFixed(2)}</span>
       </div>
       <div>
           <button onClick={() => handleChangeQty(lineItem.product._id, lineItem.qty - 1)}>
             −
-          </button>
+          </button>&nbsp;&nbsp;
         <span>{lineItem.qty}</span>
           <button onClick={() => handleChangeQty(lineItem.product._id, lineItem.qty + 1)}>
             +

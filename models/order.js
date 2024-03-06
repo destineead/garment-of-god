@@ -47,7 +47,7 @@ orderSchema.statics.getCart = function(userId) {
   );
 };
 
-orderSchema.methods.addItemToCart = async function (productId) {
+orderSchema.methods.addItemToCart = async function (productId, {selectedSize, selectedColor}) {
   const cart = this;
   const lineItem = cart.lineItems.find(lineItem => lineItem.product._id.equals(productId));
   if (lineItem) {
@@ -55,6 +55,8 @@ orderSchema.methods.addItemToCart = async function (productId) {
   } else {
     const Product = mongoose.model('Product');
     const product = await Product.findById(productId);
+    if (selectedSize) product.size = selectedSize;
+    if (selectedColor) product.color = selectedColor;
     cart.lineItems.push({ product });
   }
   return cart.save();
