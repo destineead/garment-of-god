@@ -68,9 +68,9 @@ export default function HomePage() {
                         <div class="footer-social">
                             <h3>Follow Us</h3>
                             <ul>
-                                <li><a href="#"><img src={facebook} alt="Facebook" /></a></li>
-                                <li><a href="#"><img src={tiktok} alt="TikTok" /></a></li>
-                                <li><a href="#"><img src={instagram} alt="Instagram" /></a></li>
+                                <li><a href="https://www.facebook.com/garmentofgod?mibextid=hu50Ix"><img src={facebook} alt="Facebook" /></a></li>
+                                <li><a href="https://www.tiktok.com/@garmentofgod?_t=8kRjeDdgfp8&_r=1"><img src={tiktok} alt="TikTok" /></a></li>
+                                <li><a href="https://www.instagram.com/garmentofgod/?igsh=MXBja3Y3MDliZ295eQ%3D%3D&utm_source=qr"><img src={instagram} alt="Instagram" /></a></li>
                             </ul>
                         </div>
                     </div>
