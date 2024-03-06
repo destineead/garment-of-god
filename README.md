@@ -24,7 +24,7 @@ Welcome to Garment of God! A faith-based appareal brand founded by husband and w
 
   |   Description | Screenshot | 
   |:-------------:| -----------|
-  | <h3>Home Page</h3> | <img src="https://i.imgur.com/wOCjloC.png" width="700"/> |
+  | <h3>Home Page</h3> | <img src="https://i.imgur.com/IhxbSiP.png" width="700"/> |
   | <h3 align="center">Product Detail Page</h3> | <img src="https://i.imgur.com/wOCjloC.png" width="700"/> |
 
 
