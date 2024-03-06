@@ -1,0 +1,19 @@
+.confirmation-container {
+  margin-top: 8em;
+  margin-left: 20em;
+  max-width: 800px;
+  padding: 80px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-container h1 {
+  color: black;
+}
+
+.confirmation-container p {
+  margin: 10px 0;
+  color: #333;
+}

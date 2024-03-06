@@ -1,10 +1,12 @@
+import React from 'react';
+import './ConfirmationPage.css';
+
 export default function Confirmation() {
-  return(
-    <div>
-      <h1>Thank You</h1>
+  return (
+    <div className="confirmation-container">
+      <h1>Thank You!</h1>
       <p>Your order has been successfully placed.</p>
-      <p>Order ID: </p>
       <p>We will send you an email confirmation shortly.</p>
-  </div>
-  )
+    </div>
+  );
 }

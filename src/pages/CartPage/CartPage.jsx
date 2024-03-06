@@ -1,5 +1,5 @@
 import LineItem from '../../components/LineItem/LineItem';
-import './CartPage.css'
+import './CartPage.css';
 
 export default function CartPage({ order, handleChangeQty, handleCheckout }) {
   if (!order) return null;
@@ -11,13 +11,15 @@ export default function CartPage({ order, handleChangeQty, handleCheckout }) {
       handleChangeQty={handleChangeQty}
     />
   );
+
   return (
     <div className="cart-page">
       <h1>Cart Page</h1>
       <div className="line-item-container">
-     {lineItems}
-     <button onClick={handleCheckout} disabled={!lineItems.length}>Checkout</button>
-     </div>
+        {lineItems}
+        <div className="order-total">Order Total: ${order.orderTotal.toFixed(2)}</div>
+        <button className="checkout-button" onClick={handleCheckout} disabled={!lineItems.length}>Checkout</button>
+      </div>
     </div>
   );
-} 
+}

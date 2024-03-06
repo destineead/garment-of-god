@@ -1,7 +1,5 @@
 import './LineItem.css'
 export default function LineItem({lineItem, handleChangeQty}) {
-console.log(lineItem.product.color)
-console.log(lineItem.product.size)
   return (
     <div className="lineItem">
       <div>{lineItem.product.name}</div>

@@ -22,85 +22,105 @@ body {
 }
 
 /*  OUR STORY */
-#our-story-title {
-color: white;
-width: 45%;
-margin: 0;
+
+#our-story .story-content {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 50px;
 }
 
 #our-story-content {
- color: white;
- width: 50%;
+  padding-left: 20px;
+  padding-right: 50px;
+  text-align: left;
 }
-
-/* BEST SELLERS */
-.best-sellers > h2 {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1; 
-}
-
-
-#best-sellers {
-  background-color: black;
+#our-story-title {
   color: white;
+  margin: 0;
 }
 
-#bs-bg-image {
-  background-image: url("https://i.imgur.com/LZGREXX.jpeg");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 75% 100%;
-  flex: 1;
-  height: 100%;
-}
-
-#bs-content {
-  flex: 1;
-  height: 100%;
-  overflow: auto;
-}
-
-#bs-content > span {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: italic;
+#owners {
+  width: 45%;
+  margin: 0;
 }
 
 /* SELFIE */
-#selfie {
+
+#selfie-container {
   color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* MISSION */
-#mission {
-  background-color: black;
-  color: white;
+#selfie h2 {
+  margin-bottom: 10px;
 }
 
-#mission-bg-image {
-  background-image: url("https://i.imgur.com/mkLuFgG.jpeg");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 60% 100%;
-  flex: 1;
-  height: 100%;
+.collage > img {
+  width: 225px;
+  height: 325px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px;
+  transition: transform 0.3s ease;
 }
 
-.mission-content {
-width: 40%;
-margin: 0;
+.section img:hover {
+  transform: scale(1.05);
 }
 
-#contact {
-  background-image: url("https://i.imgur.com/YticSFz.jpeg");
-  background-size: auto;
+/* LAST SLIDE */
+
+#lastslide {
+  background-image: url("https://i.imgur.com/Cxoz4yA.jpeg");
+  background-size: cover;
   background-position: center;
   color: white;
 }
+
+/* FOOTER */
+footer {
+  background-color: white;
+  color: black;
+  padding: 20px 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo > img {
+width: 50px;
+  height: auto;
+}
+
+.footer-links ul, .footer-social ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li, .footer-social ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
 
 button {
   padding: 1em 2em;
